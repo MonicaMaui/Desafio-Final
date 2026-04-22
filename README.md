@@ -40,26 +40,26 @@ npm install
 Rodar servidor
 node server.js
 ---
-✅ Servidor
+## ✅ Servidor
 http://localhost:3000
 ---
 Mensagem esperada:
 
 Servidor rodando em http://localhost:3000
 ---
-🔗 Rotas
-GET /
+## 🔗 Rotas
+## GET /
 
 Verificar API
 
 http://localhost:3000/
 GET /desaparecidos
 ---
-Listar todos
+L## istar todos
 
 http://localhost:3000/desaparecidos
 ---
-POST /desaparecidos
+## POST /desaparecidos
 
 Cadastrar novo desaparecido
 
@@ -76,7 +76,7 @@ Body JSON
   "data_desaparecimento": "15/04/2026"
 }
 ---
-PUT /desaparecidos/id:
+## PUT /desaparecidos/id:
 Atualizar status
 http://localhost:3000/desaparecidos/1
 ---
@@ -85,7 +85,7 @@ Body JSON
   "status": "Encontrado"
 }
 ---
-DELETE /desaparecidos/:id
+D## DELETE /desaparecidos/:id
 
 Excluir cadastro
 DELETE /desaparecidos/:id
@@ -93,7 +93,8 @@ DELETE /desaparecidos/:id
 Excluir cadastro
 http://localhost:3000/desaparecidos/2
 ---
-🗃️ Banco de Dados
+
+## 🗃️ Banco de Dados
 
 Tabela:
 desaparecidos
@@ -111,13 +112,13 @@ data_desaparecimento
 status
 ---🧪 Testes
 
-Rotas testadas com:
+## Rotas testadas com:
 
 Postman
 Navegador
 SQLite
 ---
-👩‍💻 Desenvolvedora
+## 👩‍💻 Desenvolvedora
 
 Monica Maui
 
