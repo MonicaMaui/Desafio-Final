@@ -25,41 +25,74 @@ Permite:
 
 ---
 
-## ⚙️ Instalação
-
-### Clonar repositório
+## GET /## ⚙️ Instalação
 
 ```bash
-git clone https://github.com/MonicaMaui/Desaparecidos-Enchentes-RS.git
-Entrar na pasta
-cd Desafio-Final
----
-Instalar dependências
 npm install
+```
 ---
-Rodar servidor
-node server.js
----
-## ✅ Servidor
+## ▶️ Como Executar
+bash
+npm run dev
+
 http://localhost:3000
+
+[Clique Aqui](http://localhost:3000)
+
 ---
-Mensagem esperada:
 
-Servidor rodando em http://localhost:3000
+##  🗄️ Banco de Dados
+O banco de dados é criado automaticamente ao iniciar o projeto.
+
+database.db
+
+
+## 📋 Tabela: desaparecidos
+
+| Campo                  | Descrição                    |
+|------------------------|------------------------------|
+| id                     | Identificador único          |
+| nome                   | Nome da pessoa desaparecida  |
+| idade                  | Idade                        |
+| roupa                  | Roupa utilizada no momento   |
+| descricao              | Descrição adicional          |
+| localizacao            | Última localização conhecida |
+| telefone               | Telefone para contato        |
+| data_desaparecimento   | Data do desaparecimento      |
+| status                 | Status do caso               |
+
 ---
-## 🔗 Rotas
-## GET /
 
-Verificar API
+## 🔗 Endpoints
 
-http://localhost:3000/
+Retorna uma página HTML simples com informações da API.
+
+
+
+---
+### 🏠 Rota Inicial
+### Rota para listar todos os desaparecidos
+
+http
 GET /desaparecidos
----
-L## istar todos
 
-http://localhost:3000/desaparecidos
+Retorna todos os registros do banco de dados
 ---
-## POST /desaparecidos
+
+### Rota para buscar um  dado espefífico (ID)
+
+http
+GET /desaparecidos/:id
+
+
+Ex: /desaparecidos/:1
+
+Retorna um  caso espefífico
+---
+### Rota para criar um novo desaparecido
+
+http
+POST /desaparecido
 
 Cadastrar novo desaparecido
 
@@ -84,8 +117,10 @@ Body JSON
 {
   "status": "Encontrado"
 }
+
 ---
-D## DELETE /desaparecidos/:id
+
+## DELETE /desaparecidos/:id
 
 Excluir cadastro
 DELETE /desaparecidos/:id
@@ -94,39 +129,32 @@ Excluir cadastro
 http://localhost:3000/desaparecidos/2
 ---
 
-## 🗃️ Banco de Dados
+## 🔒 Segurança
+A API utiliza '?' nas queries SQL:
 
-Tabela:
-desaparecidos
+ 
+ sql
+WHERE id = ?
+
+
+Isso evita o SQL Injection
+
 ---
-Campos:
 
-id
-nome
-idade
-roupa
-descricao
-localizacao
-telefone
-data_desaparecimento
-status
----🧪 Testes
+## 📚 Conceitos
+- CRUD (Create,Read,Uldate, Delete)
+- Rotas com Express
+- Métodos/Verbos HTTP
 
-## Rotas testadas com:
-
-Postman
-Navegador
-SQLite
 ---
-## 👩‍💻 Desenvolvedora
 
-Monica Maui
-
-GitHub:
+## 👩‍💻Projeto Educacional
+Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js
+Criado por Mônica dos Santos
 https://github.com/MonicaMaui
 ---
 
----
+
 
 
 
