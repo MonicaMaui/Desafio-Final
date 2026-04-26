@@ -1,20 +1,20 @@
-# 🌊 API de Pessoas Desaparecidas - Enchentes RS
+🌊 API de Pessoas Desaparecidas - Enchentes RS
 
 API REST desenvolvida para cadastro, consulta e gerenciamento de pessoas desaparecidas durante enchentes no Rio Grande do Sul.
 
-Permite:
+✨ Funcionalidades
 
-- cadastrar desaparecidos
-- listar todos os registros
-- buscar por ID
-- buscar por nome
-- atualizar status (Desaparecido / Encontrado)
-- excluir cadastros
+Permite:
+- Cadastrar desaparecidos
+- Listar todos os registros
+- Buscar por ID
+- Buscar por nome
+- Atualizar status (Desaparecido / Encontrado)
+- Excluir cadastros
 
 ---
 
-## 🚀 Tecnologias
-
+🚀 Tecnologias Utilizadas
 - Node.js
 - Express
 - SQLite
@@ -22,30 +22,33 @@ Permite:
 - JavaScript
 - Postman
 - VS Code
-
 ---
 
-## GET /## ⚙️ Instalação
+## ⚙️ Instalação
 
 ```bash
 npm install
 ```
 ---
 ## ▶️ Como Executar
-bash
+```bash
 npm run dev
+```
+---
+🔗 Acesse:
 
 http://localhost:3000
 
 [Clique Aqui](http://localhost:3000)
 
 ---
-
+---
 ##  🗄️ Banco de Dados
 O banco de dados é criado automaticamente ao iniciar o projeto.
 
+```bash
 database.db
-
+```
 
 ## 📋 Tabela: desaparecidos
 
@@ -63,27 +66,31 @@ database.db
 
 ---
 
-## 🔗 Endpoints
-
-Retorna uma página HTML simples com informações da API.
+🔗 Endpoints
 
 
-
----
 ### 🏠 Rota Inicial
 ### Rota para listar todos os desaparecidos
 
+Retorna uma página HTML simples com informações da API.
 http
 GET /desaparecidos
-
-Retorna todos os registros do banco de dados
 ---
 
-### Rota para buscar um  dado espefífico (ID)
+📌 Listar todos os desaparecidos
 
-http
+```bash
+GET /desaparecidos
+```
+Retorna todos os registros do banco de dados.
+
+---
+
+### 🔍 Buscar desaparecido por ID
+
+```bash
 GET /desaparecidos/:id
-
+```
 
 Ex: /desaparecidos/:1
 
@@ -92,20 +99,15 @@ Retorna um  caso espefífico
 ### Rota para criar um novo desaparecido
 
 
-
-Cadastrar novo desaparecido
+### Cadastrar novo desaparecido
 ```http
 POST /desaparecidos
 ```
-### Body (JSON)
-```http
-
-
-
+### URL
 http://localhost:3000/desaparecidos
 ---
-Body JSON
-
+### Body (JSON)
+```JSON
 {
   "nome": "Juliana Martins",
   "idade": 31,
@@ -115,50 +117,64 @@ Body JSON
   "telefone": "(51) 99988-7766",
   "data_desaparecimento": "15/04/2026"
 }
+```
 ---
 ## PUT /desaparecidos/id:
-Atualizar status
-http://localhost:3000/desaparecidos/1
----
-Body JSON
+✏️ Atualizar status
+```http
+PUT /desaparecidos/:id
+```
+
+
+    ## Body (JSON)
+
+``` JSON
 {
   "status": "Encontrado"
 }
 
----
+```
 
 ## DELETE /desaparecidos/:id
-
-Excluir cadastro
+```http
 DELETE /desaparecidos/:id
+```
 
-Excluir cadastro
-http://localhost:3000/desaparecidos/2
+
+# Exemplo
+``` http
+
+http://localhost:3000/desaparecidos/1
+```
+
 ---
 
 ## 🔒 Segurança
 A API utiliza '?' nas queries SQL:
-
- 
- sql
+```sql
 WHERE id = ?
-
-
+``` 
 Isso evita o SQL Injection
 
 ---
 
-## 📚 Conceitos
-- CRUD (Create,Read,Uldate, Delete)
-- Rotas com Express
-- Métodos/Verbos HTTP
+  ###  📚 Conceitos Aplicados
+
+---
+  - CRUD (Create, Read, Update, Delete
+
+  - Rotas com Espress
+  - Métodos / Verbos HTTP
+  - Banco de dados com SQLite
+   - API REST
+
 
 ---
 
 ## 👩‍💻Projeto Educacional
 Este projeto foi desenvolvido para fins de aprendizado em back-end com Node.js
 Criado por Mônica dos Santos
-https://github.com/MonicaMaui
+
 ---
 
 
