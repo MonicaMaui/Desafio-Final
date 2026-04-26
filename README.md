@@ -91,14 +91,21 @@ Retorna um  caso espefífico
 ---
 ### Rota para criar um novo desaparecido
 
-http
-POST /desaparecido
+
 
 Cadastrar novo desaparecido
+```http
+POST /desaparecidos
+```
+### Body (JSON)
+```http
+
+
 
 http://localhost:3000/desaparecidos
 ---
 Body JSON
+
 {
   "nome": "Juliana Martins",
   "idade": 31,
